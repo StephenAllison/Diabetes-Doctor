@@ -24,7 +24,7 @@ const User = require('./models/User')
 
 mongoose.Promise = Promise;
 mongoose
-  .connect('mongodb://localhost/2019nbadraft', {useMongoClient: true})
+  .connect('mongodb://localhost/2019nbadraft', {useNewUrlParser:true})
   .then(() => {
     console.log('Connected to Mongo!')
   }).catch(err => {
@@ -125,6 +125,11 @@ const authRoutes = require('./routes/authroutes')
 app.use('/', authRoutes);
 const recruiterPage = require('./routes/recruiter');
 app.use('/' ,recruiterPage);
+const athleteListPage = require('./routes/athlete');
+app.use('/' ,athleteListPage);
+const athleteCreatePage = require('./routes/athlete');
+app.use('/' ,athleteListPage);
+
 
 
 
