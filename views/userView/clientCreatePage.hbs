@@ -1,0 +1,40 @@
+<h1>Client Database</h1>
+
+
+<form action="/clientListPage" method="POST" id="form-container">
+
+
+  <label for="name">Name</label>
+  <input id="name" type="text" name="name" placeholder="Name">
+
+ <br><br>
+  <label for="age">Age</label>
+  <input id="age" type="text" name="age" placeholder="Age">
+
+
+ <br><br>
+  <label for="gender">Gender</label>
+  <input id="gender" type="text" name="gender" placeholder="Gender">
+
+ <br><br>
+  <label for="bloodGlucose">Blood Glucose Level</label>
+  <input id="bloodGlucose" type="text" name="bloodGlucose" placeholder="bloodGlucose">
+
+
+  <br><br>
+  <label for="insulin">Insulin Level</label>
+  <input id="insulin" type="insulin" name="insulin" placeholder="insulin">
+
+   
+  {{#if message}}
+    <div class="error-message">{{ message }}</div>
+  {{/if}}
+  <br><br>
+
+  <button>Create Client</button>
+
+  <p class="account-message">
+    Do you already have an account?
+    <a href="/login">Login</a>
+  </p>
+</form>

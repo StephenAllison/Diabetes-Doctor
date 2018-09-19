@@ -24,7 +24,7 @@ const User = require('./models/User')
 
 mongoose.Promise = Promise;
 mongoose
-  .connect('mongodb://localhost/2019nbadraft', {useNewUrlParser:true})
+  .connect('mongodb://localhost/Doctor', {useNewUrlParser:true})
   .then(() => {
     console.log('Connected to Mongo!')
   }).catch(err => {
@@ -123,13 +123,13 @@ const index = require('./routes/index');
 app.use('/' ,index);
 const authRoutes = require('./routes/authroutes')
 app.use('/', authRoutes);
-const recruiterPage = require('./routes/recruiter');
-app.use('/' ,recruiterPage);
-const athleteListPage = require('./routes/athlete');
-app.use('/' ,athleteListPage);
-const athleteCreatePage = require('./routes/athlete');
-app.use('/' ,athleteListPage);
-
+const clinicianPage = require('./routes/clinician');
+app.use('/' ,clinicianPage);
+const clientListPage = require('./routes/client');
+app.use('/' ,clientListPage);
+const clientCreatePage = require('./routes/client');
+app.use('/' ,clientListPage);
+//should above last line be clientCreatePage or clientListPage
 
 
 

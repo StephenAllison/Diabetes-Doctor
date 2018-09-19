@@ -20,7 +20,7 @@ router.get("/signup", (req, res, next) => {
 
   router.post("/signup", (req, res, next) => {
     const organization = req.body.organization;
-    const role = req.body.role;
+    const title = req.body.title;
     const name = req.body.name;
     const username = req.body.username;
     const password = req.body.password;
@@ -43,13 +43,13 @@ router.get("/signup", (req, res, next) => {
   
       User.create({
           organization: organization,
-          role: role,
+          title: title,
           name: name,
           username: username,
           password: hashPass
       })
       .then((response)=>{
-        res.redirect("/");
+        res.redirect("/login");
       })
       .catch((err)=>{
         res.render("userView/signup", { message: req.flash("error") });
@@ -66,7 +66,7 @@ router.get("/signup", (req, res, next) => {
   })
 
   router.post('/login', passport.authenticate('local', {
-    successRedirect: "/recruiter",
+    successRedirect: "/clinician",
     failureRedirect: "/login",
     failureFlash: true,
     successFlash: true,
@@ -76,7 +76,7 @@ router.get("/signup", (req, res, next) => {
 
   router.get('/logout', (req, res, next)=>{
       req.logout()
-    res.redirect('/')
+      res.redirect('/')
   })
 
 
