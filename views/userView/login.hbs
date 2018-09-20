@@ -1,18 +1,21 @@
-<h1>Login</h1>
+<img src="../images/Livabetes-white-logo.png">
+<div>
+  <form action="/login" method="POST">
+    <div>
+      <label for="username">Username:</label>
+      <input type="text" name="username">
+    </div>
+    <div>
+      <label for="password">Password:</label>
+      <input type="password" name="password">
+    </div>
+</div>
+{{#if message}}
+<div>{{message}}</div>
+{{/if}}
 
-<form action="/login" method="POST">
-  <div>
-    <label for="username">Username:</label>
-    <input type="text" name="username">
-  </div>
-  <div>
-    <label for="password">Password:</label>
-    <input type="password" name="password">
-  </div>
+<div class= loginBtn>
 
-  {{#if message}}
-  <div>{{message}}</div>
-  {{/if}}
-
-  <div>
-    <input type="submit" value="Log In">
+  <button type="button">Log in</button>
+  
+</div>
