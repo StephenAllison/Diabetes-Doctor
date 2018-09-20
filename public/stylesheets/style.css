@@ -9,7 +9,11 @@ a {
 
 .index {
   display: flex;
-  background-color: #613FDE;
+  padding: 0;
+  margin: 0;
+  background-image: url("../images/BackGround.png");
+  background-repeat: no-repeat;
+  background-size: cover;
   justify-content: center;
   flex-direction: column;
   width: 100%;
@@ -17,11 +21,16 @@ a {
 
 .nurseIndex {
   display: flex;
-  width: 50vw; }
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30vw; }
 
 .logoIndex {
   display: flex;
-  width: 25vw;
-  justify-content: center; }
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 15vw; }
 
 /*# sourceMappingURL=style.css.map */

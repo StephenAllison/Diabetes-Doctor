@@ -73,7 +73,7 @@ router.post('/client/create', (req, res, next) => {
     clientNotes: req.body.clientNotes
   })
   .then(response => {
-    res.redirect('/client')
+    res.redirect('client')
   })
 });
 
