@@ -24,7 +24,7 @@ const User = require('./models/User')
 
 mongoose.Promise = Promise;
 mongoose
-  .connect('mongodb://localhost/Doctor', {useNewUrlParser:true})
+  .connect(process.env.MONGODB_URI, {useNewUrlParser:true})
   .then(() => {
     console.log('Connected to Mongo!')
   }).catch(err => {

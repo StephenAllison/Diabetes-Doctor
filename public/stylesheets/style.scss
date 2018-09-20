@@ -1,8 +1,8 @@
 
 
 body {
-  padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  
 }
 
 a {
@@ -11,4 +11,25 @@ a {
 
 .clientDetails {
   border-color: white;
+}
+
+.index {
+  display:flex;
+  background-color:#613FDE;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+
+}
+
+.nurseIndex {
+  display:flex;
+  width: 50vw;
+}
+
+.logoIndex {
+  display:flex;
+  width: 25vw;
+  justify-content: center;
 }

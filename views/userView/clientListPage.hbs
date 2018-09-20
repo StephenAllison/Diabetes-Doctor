@@ -1,25 +1,18 @@
-<h1>Home</h1>
-<div class = "container">
-<div class="row">
-    <div class="col-md-4">
-    {{#each theList}}
-<div>
-Name:           {{this.name}}<br><br>
-Age:            {{this.age}}<br><br>
-Gender:         {{this.gender}}<br><br>
-Blood Glucose:  {{this.bloodGlucose}}<br><br>
-Insulin:        {{this.insulin}}<br><br>
-nextApointment: {{this.nextApointment}}<br><br>
-clientNotes:    {{this.clientNotes}}<br><br>
-<br><br><br>
 
-{{/each}}
-</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            {{#each theList}}
+            <div>
+                Name: {{this.name}}<br><br> Age: {{this.age}}<br><br> Gender: {{this.gender}}<br><br> Blood Glucose: {{this.bloodGlucose}}<br><br>                Insulin:
+                {{this.insulin}}<br><br> nextApointment: {{this.nextApointment}}<br><br> clientNotes: {{this.clientNotes}}<br><br>
+                <br><br><br> {{/each}}
+            </div>
 
-</div>
-<dv class="col-md-4">
+        </div>
+        <dv class="col-md-4">
 
- 
-</dv>
-</div>
+
+        </dv>
+    </div>
 </div>

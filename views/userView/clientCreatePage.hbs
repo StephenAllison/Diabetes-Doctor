@@ -1,22 +1,22 @@
 <h1>Client Database</h1>
 
 
-<form action="/clientListPage" method="POST" id="form-container">
+<form action="/client/create" method="POST" id="form-container">
 
 
   <label for="name">Name</label>
   <input id="name" type="text" name="name" placeholder="Name">
 
- <br><br>
+  <br><br>
   <label for="age">Age</label>
   <input id="age" type="text" name="age" placeholder="Age">
 
 
- <br><br>
+  <br><br>
   <label for="gender">Gender</label>
   <input id="gender" type="text" name="gender" placeholder="Gender">
 
- <br><br>
+  <br><br>
   <label for="bloodGlucose">Blood Glucose Level</label>
   <input id="bloodGlucose" type="text" name="bloodGlucose" placeholder="bloodGlucose">
 
@@ -25,17 +25,14 @@
   <label for="insulin">Insulin Level</label>
   <input id="insulin" type="insulin" name="insulin" placeholder="insulin">
 
-   <br><br>
+  <br><br>
   <label for="nextAppointment">Next Appointment</label>
   <input id="nextAppointment" type="nextAppointment" name="nextAppointment" placeholder="nextAppointment">
 
-   <br><br>
+  <br><br>
   <label for="clientNotes">Client Notes</label>
-  <input id="clientNotes" type="clientNotes" name="clientNotes" placeholder="clientNotes">
-
-   
-  {{#if message}}
-    <div class="error-message">{{ message }}</div>
+  <input id="clientNotes" type="clientNotes" name="clientNotes" placeholder="clientNotes"> {{#if message}}
+  <div class="error-message">{{ message }}</div>
   {{/if}}
   <br><br>
 
