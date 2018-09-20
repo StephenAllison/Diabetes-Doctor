@@ -1,2 +1,10 @@
-<h1>Welcome  <br><br>{{theUser.title}} {{theUser.name}} of {{theUser.organization}}.</h1>
+<h1>Welcome <br><br>{{theUser.title.id}} {{theUser.name}} of {{theUser.organization}}.</h1>
 
+{{#each theList}}
+<div>
+    Name: {{this.name}}<br><br> Age: {{this.age}}<br><br> Gender: {{this.gender}}<br><br> Blood Glucose: {{this.bloodGlucose}}<br><br>    Insulin:
+    {{this.insulin}}<br><br>
+    <button class="clientDetails"><a href='/clientDetails/{{this._id}}'><img src="/images/add-plus-button (1).png" alt=""></a></button>
+    <br><br><br>
+</div>
+{{/each}}

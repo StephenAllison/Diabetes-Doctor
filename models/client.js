@@ -3,10 +3,13 @@ const Schema   = mongoose.Schema;
 
 const clientSchema = new Schema({
   name: String,
+  image: String,
   age: String,
   gender: String,
   bloodGlucose: String,
   insulin: String,
+  nextAppointment: String,
+  clientNotes: String,
 });
 
 

@@ -11,7 +11,7 @@ const client = require("../models/client");
 
 
   router.get('/client', (req, res, next) => {
-    Client.find()
+    client.find()
     .then((responseFromdataBase)=>{
         console.log('=-=-=-=-=-=-=-=-=-', responseFromdataBase) 
         res.render('userView/clientListPage', { theList: responseFromdataBase});
@@ -22,17 +22,84 @@ const client = require("../models/client");
 });
 
 
+router.get('/home', (req, res, next) => {
+    client.find()
+    .then((responseFromdataBase)=>{
+        // console.log('=-=-=-=-=-=-=-=-=-', responseFromdataBase) 
+        res.render('userView/clinicianPage', { theList: responseFromdataBase});
+    })
+    .catch((err)=>{
+        next(err);
+    })
+});
+
+router.get('/clientDetails/:id', (req, res, next)=>{
+    const clientID = req.params.id
+    client.findById(clientID)
+
+    .then((theClient)=>{
+        console.log(theClient)
+        res.render('userView/clientDetails', {client: theClient})
+    })
+    .catch((err)=>{
+        next(err);
+    });
+});
 
 
+router.get('/userView/clientDetails/:clientID', (req, res, next)=>{
+           
+            res.render('userView/clientEditPage', {theClient: theClient});
+
+    })
 
 
+router.get('/client/edit/:clientID', (req, res, next)=>{
+    client.findById(req.params.clientID)
+    .then((theClient)=>{            
+            res.render('userView/clientEditPage', {theClient: theClient});
+        })
+        .catch((err)=>{
+            next(err)
+        })
+    })
+// updating client form
+router.get('/client/update/:clientID', (req, res, next)=>{
+    client.findById(req.params.clientID)
+    .then((theClient)=>{            
+            res.render('userView/clientUpdatePage', {theClient: theClient});
+        })
+        .catch((err)=>{
+            next(err)
+        })
+})
+
+router.post('/client/update/:clientID', (req, res, next)=>{
+    client.findByIdAndUpdate(req.params.clientID, {
+        name: req.body.name,
+        image: req.body.image,
+        age: req.body.age,
+        gender: req.body.gender,
+        bloodGlucose: req.body.bloodGlucose,
+        insulin: req.body.insulin,
+        nextAppointment: req.body.nextAppointment,
+        clientNotes: req.body.clientNotes,
+
+    })
+    .then((response)=>{
+        res.redirect('/clientDetails/'+req.params.clientID);
+    })
+    .catch((err)=>{
+        next(err)
+    })
+})
 
 /* POST page to create clients */
 router.post('/client/create', (req, res, next)=>{
 
     console.log(req.body);
 
-    Client.create({
+    client.create({
         name: req.body.name,
         age: req.body.age,
         gender: req.body.gender,
@@ -44,11 +111,8 @@ router.post('/client/create', (req, res, next)=>{
     })
     .catch((err)=>{
         next(err);
-    })
+    });
 
 });
-
-
-
 
 module.exports = router;

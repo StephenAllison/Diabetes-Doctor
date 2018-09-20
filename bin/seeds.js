@@ -15,23 +15,29 @@ mongoose
 const SuzyFlake = 
 {name: "Suzy Flake",
 age: 4,
-gender: Female,
+gender: "female",
 bloodGlucose: 121,
-insulin: "10:1",}
+insulin: "10:1",
+nextAppointment: "12/25/2018",
+clientNotes: "Client doing Well!"}
 
 const BillyThompson = 
 {name: "Billy Thompson", 
 age: 4,
-gender: Female,
+gender: "female",
 bloodGlucose: 121,
-insulin: "10:1",}
+insulin: "10:1",
+nextAppointment: "12/25/2018",
+clientNotes: "Client doing Well!"}
 
 const JennyCraig = 
-{name: "Jenny Craig", 
+{name: "Jenny Craig",
 age: 4,
-gender: Female,
+gender: "female",
 bloodGlucose: 121,
-insulin: "10:1",}
+insulin: "10:1",
+nextAppointment: "12/25/2018",
+clientNotes: "Client doing Well!"}
 
         Client.create([SuzyFlake, BillyThompson ,JennyCraig ,])
         .then((response)=>{
