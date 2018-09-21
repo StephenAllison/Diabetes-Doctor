@@ -8,6 +8,7 @@ const client = require("../models/client");
 //   res.render('userView/clientListPage');
 
 router.get("/home", (req, res, next) => {
+  console.log('=-=-=-=-=-=-=-=-=-=-=', req.user)
   client
     .find()
     .then(responseFromdataBase => {

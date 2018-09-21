@@ -1,36 +1,18 @@
-<h2>Signup</h2>
-
-<form action="/signup" method="POST" id="form-container">
-
-
-  <label for="organization">Organization</label>
-  <input id="organization" type="text" name="organization" placeholder="Organization">
-
-  <br><br>
-  <label for="title">Title</label>
-  <input id="title" type="text" name="title" placeholder="MD/NP/RN">
-
-
-  <br><br>
-  <label for="name">Name</label>
-  <input id="name" type="text" name="name" placeholder="Name">
-
-  <br><br>
-  <label for="username">Username</label>
-  <input id="username" type="text" name="username" placeholder="User Name">
-
-
-  <br><br>
-  <label for="password">Password</label>
-  <input id="password" type="password" name="password" placeholder="Password"> {{#if message}}
-  <div class="error-message">{{ message }}</div>
-  {{/if}}
-  <br><br>
-
-  <button>Create account</button>
-
-  <p class="account-message">
-    Do you already have an account?
-    <a href="/login">Login</a>
-  </p>
+<div class= "signup">
+  <h1 class="h1">Signup</h1>
+<form class="formSignUP" action="" method="post">
+<label for="field1">
+<input type="text" name="username" placeholder="Username" required="true" />
+<p>Username must not be taken.</p>
+</label>
+<label for="field2">
+<input type="email" name="Password" placeholder="Password" required="true" />
+<p>Password must be at least 8 characters.</p>
+</label>
+<label for="field3">
+<input type="text" name="Password" placeholder="Password" required="true" />
+<p>Both passwords must match.</p>
+</label>
 </form>
+  <a href="/login"><button>Create Account</button></a>
+</div>

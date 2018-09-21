@@ -1,21 +1,29 @@
-<div class= "loginPage">
-  <img src="../images/Livabetes-white-logo.png">
-  <form action="/login" method="POST">
-    <div>
-      <label for="username">Username:</label>
-      <input type="text" name="username">
+<div class="loginPage">
+
+  <img class="logoLogin" src="../images/Livabetes-white-logo.png"> 
+  
+
+  <div>
+    <br>
+    <div class="loginForm">
+      <form class="form-style-4" action="" method="post">
+        <label for="field1">
+          <input type="text" name="username" placeholder="Username" required="true" />
+        </label>
+        <label for="field2">
+          <input type="text" name="password" placeholder="Password" required="true" />
+        </label>
+        <button class="loginBtn">Log in</button>
+      </form>
     </div>
     <div>
-      <label for="password">Password:</label>
-      <input type="password" name="password">
+      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  {{#if message}}
+  <div>{{message}}</div>
+  {{/if}}
+  
+  <p class="p">Don't have an account?</p>
+      <a href="/signup"></a><button class="signupBtn" , type="button">Sign up</a>
     </div>
-
-{{#if message}}
-<div>{{message}}</div>
-{{/if}}
-
-<div class= "loginBtn">
-  <button type="button">Log in</button>
-</div>
-
+  </div>
 </div>

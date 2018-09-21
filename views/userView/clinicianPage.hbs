@@ -1,10 +1,43 @@
-<h1>Welcome <br><br>{{theUser.title.id}} {{theUser.name}} of {{theUser.organization}}.</h1>
 
-{{#each theList}}
+<div class="Background">
+  <h4 class="home">Home</h4>
+</div>
+<!--
+ {{#each theList}}
 <div>
-    Name: {{this.name}}<br><br> Age: {{this.age}}<br><br> Gender: {{this.gender}}<br><br> Blood Glucose: {{this.bloodGlucose}}<br><br>    Insulin:
-    {{this.insulin}}<br><br>
-    <button class="clientDetails"><a href='/clientDetails/{{this._id}}'><img src="/images/add-plus-button (1).png" alt=""></a></button>
+    Name: {{this.name}}<br><br>  
+    Image: {{this.image}}<br><br> 
+    Age: {{this.age}}<br><br> 
+    Gender: {{this.gender}}<br><br> 
+    Blood Glucose: {{this.bloodGlucose}}<br><br>    
+    Insulin:
+    {{this.insulin}}<br><br> 
+    Next Apointment: {{this.nextApointmentTime}} <br><br> 
+    clientNotes: {{this.clientNotes}}<br><br>
     <br><br><br>
 </div>
-{{/each}}
+{{/each}} -->
+
+<section>
+  {{#each theList}}
+	<aside>
+		<div class="card col-lg-10">
+			<div class="card-title">
+			<h4>{{ this.name}}</h4>
+			<img class="userPics col-lg-8" src="{{this.image}}" alt=“”/>
+			</div>
+			<div class="card-content">
+				<p class="card-content-footer"><span>Next Appt</span><br>
+			<{{this.nextAppointmentTime}} 
+      <p class="card-content-footer">
+				<p class="card-content-footer2">
+              <span>Medical History</span><br><a img src=></a>
+				{{!-- <img src="" alt="" /> --}}
+        <button><a href="/client"><img src="/images/add-plus-button (1).png" alt=""></a></button>
+				</p>
+			</div>
+		</div>
+	</aside>
+
+  {{/each}}
+</section>

@@ -8,7 +8,7 @@ const clientSchema = new Schema({
   gender: String,
   bloodGlucose: String,
   insulin: String,
-  nextAppointment: String,
+  nextAppointmentTime: String,
   clientNotes: String,
 });
 
