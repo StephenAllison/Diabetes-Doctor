@@ -1,10 +1,19 @@
 <div class="container">
     <div class="row">
         <div class="col-md-4">
-            {{#each theList}}
             <div>
-                Name: {{this.name}}<br><br> Image: {{this.image}}<br><br> Age: {{this.age}}<br><br> Gender: {{this.gender}}<br><br> Blood Glucose: {{this.bloodGlucose}}<br><br>  Insulin:
-                {{this.insulin}}<br><br> nextApointment: {{this.nextApointment}}<br><br> clientNotes: {{this.clientNotes}}<br><br>
+                {{#each theList}}
+                <div class="card">
+                    <div class="container">
+                        <h1><b>{{this.name}}</b></h1>
+                        <br><img class="userPics" src="{{this.image}}">
+                        <h1><br> Next Apointment:
+                            <br/>
+                            <br/> {{this.nextAppointmentTime}}
+
+                            <br><br></h1>
+                    </div>
+                </div>
                 <br><br><br> {{/each}}
             </div>
         </div>
