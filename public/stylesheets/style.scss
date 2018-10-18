@@ -130,6 +130,15 @@ body {
 
 }
 
+.appointmentRecord {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #fefefe;
+  width: 50vw;
+
+}
+
 .col-md-4 {
   flex-direction: column;
   justify-content: center;
@@ -472,6 +481,11 @@ aside .card .card-content p {
 
 .userPics {
   width: 50vw;
+}
+
+
+.clientDetailsButton {
+  width: 10vw;
 }
 
 section {
