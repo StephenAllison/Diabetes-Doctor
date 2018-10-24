@@ -90,7 +90,7 @@ mongoose
       SandraBosk,
       MarcosPalacios,
       NickCrispino,
-      ManuelMartinez
+      MartinaMartinez
     ])
       .then(response => {
         console.log(response);
