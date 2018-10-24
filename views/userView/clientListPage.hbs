@@ -1,33 +1,35 @@
-<div class="container">
-    <div class="row">
-        <div class="col-md-4">
-            <div>
-                {{#each theList}}
+<body class="clientListPage">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div>
+                    {{#each theList}}
 
-                <div class="container">
-                    <div class="card">
-                        <h1><b>{{this.name}}</b></h1>
-                        <br><img class="userPics" src="{{this.image}}">
-                        <div class="appointmentRecord">
-                            <div>
-                                <h4><br> Next Appointment:</h4>
-                                <br/>
-                                <h1>{{this.nextAppointmentTime}}</h1>
-                            </div>
-                            <div>
-                                <h4><br>Record:</h4>
-                                <br/>
-                                <h1><img src="../images/add-plus-button (1).png"></h1>
+                    <div class="container">
+                        <div class="card">
+                            <h1><b>{{this.name}}</b></h1>
+                            <br><img class="userPics" src="{{this.image}}">
+                            <div class="appointmentRecord">
+                                <div>
+                                    <h4><br> Next Appointment:</h4>
+                                    <br/>
+                                    <h1>{{this.nextAppointmentTime}}</h1>
+                                </div>
+                                <div>
+                                    <h4><br>Record:</h4>
+                                    <br/>
+                                    <h1><img src="../images/add-plus-button (1).png"></h1>
+                                </div>
                             </div>
                         </div>
+                        <br><br>
                     </div>
-                    <br><br>
                 </div>
+                <br><br><br> {{/each}}
             </div>
-            <br><br><br> {{/each}}
+        </div>
+        <div class="col-md-4">
         </div>
     </div>
-    <div class="col-md-4">
     </div>
-</div>
-</div>
+</body>
